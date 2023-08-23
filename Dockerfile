@@ -51,6 +51,7 @@ RUN curl -fsSL ${MC_HELPER_BASE_URL}/mc-image-helper-${MC_HELPER_VERSION}.tgz \
 
 ENV SERVER_PORT=25577 RCON_PORT=25575 MEMORY=512m
 EXPOSE $SERVER_PORT
+EXPOSE 19132
 
 CMD ["/usr/bin/run-bungeecord.sh"]
 HEALTHCHECK --start-period=10s CMD /usr/bin/health.sh
